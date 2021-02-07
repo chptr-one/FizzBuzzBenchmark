@@ -45,12 +45,12 @@ mvn install
 2. Compile benchmark to executable jar
 
 ```
-cd ../test
+cd ./test
 mvn install
 ```
 
 ## To run a benchmark
 
 ```
-java -jar target/benchmark.jar 
+java -jar ./test/target/benchmark.jar 
 ```
