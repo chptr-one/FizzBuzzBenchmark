@@ -54,3 +54,9 @@ mvn install
 ```
 java -jar target/benchmark.jar 
 ```
+
+## Results
+
+On my old 4-th gen i5
+
+![results](https://github.com/chptr-one/FizzBuzzBenchmark/blob/master/benchmark.png?raw=true)
