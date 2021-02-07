@@ -59,4 +59,4 @@ java -jar target/benchmark.jar
 
 On my pretty old 4-gen i5
 
-![results](https://github.com/chptr-one/FizzBuzzBenchmark/blob/master/benchmark.png&raw=true)
+![results](benchmark.png)
