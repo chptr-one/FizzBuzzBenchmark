@@ -55,8 +55,3 @@ mvn install
 java -jar target/benchmark.jar 
 ```
 
-## Results
-
-On my pretty old 4-gen i5
-
-![results](benchmark.png)
