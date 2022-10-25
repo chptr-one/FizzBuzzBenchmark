@@ -33,7 +33,7 @@ package com.github.chptr_one;
 
 import org.openjdk.jmh.annotations.*;
 
-import java.io.ByteArrayOutputStream;
+import java.io.OutputStream;
 import java.io.PrintStream;
 import java.util.concurrent.TimeUnit;
 
@@ -54,8 +54,12 @@ public class MyBenchmark {
         @Setup
         public void doSetup() {
             originalOut = System.out;
-            ByteArrayOutputStream outContent = new ByteArrayOutputStream();
-            System.setOut(new PrintStream(outContent));
+            PrintStream dummyStream = new PrintStream(new OutputStream() {
+                public void write(int b) {
+                    // do nothing
+                }
+            });
+            System.setOut(new PrintStream(dummyStream));
         }
 
         @TearDown
@@ -90,5 +94,7 @@ public class MyBenchmark {
     }
 
     @Benchmark
-    public void stringConcatenationOptimizedTest(MyState state) {new StringConcatenationFizzBuzz().print(N);}
+    public void stringConcatenationOptimizedTest(MyState state) {
+        new StringConcatenationFizzBuzz().print(N);
+    }
 }
