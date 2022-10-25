@@ -73,4 +73,9 @@ public class FizzBuzzTest {
     public void cachedFizzBuzzTest() {
         testFizzBuzz(new CachedFizzBuzz());
     }
+
+    @Test
+    public void stringConcatenationOptimizedFizzBuzz() {
+        testFizzBuzz(new StringConcatenationFizzBuzz());
+    }
 }

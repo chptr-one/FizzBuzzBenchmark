@@ -88,4 +88,7 @@ public class MyBenchmark {
     public void streamApiTest(MyState state) {
         new StreamApiFizzBuzz().print(N);
     }
+
+    @Benchmark
+    public void stringConcatenationOptimizedTest(MyState state) {new StringConcatenationFizzBuzz().print(N);}
 }
